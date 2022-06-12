@@ -7,6 +7,25 @@ This service might be handy if you want to directly download all `.eot`, `.woff`
 
 ![pic running](http://mranftl.com/static/apps/google-webfonts-helper/full_view.png)
 
+### (Optional) JSX code to visually check if the font is correctly imported
+```JSX
+{["normal", "condensed"].map((s) =>
+        [1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => (
+          <p
+            style={{
+              marginLeft: "100px",
+              fontSize: "25px",
+              fontFamily: "Jost", //change to downloaded font
+              fontWeight: i * 100,
+              fontStretch: s,
+            }}
+          >
+            testing <span style={{fontStyle: italic}}>testing</span>
+          </p>
+        ))
+      )}
+```
+
 ### REST API
 The API is public, feel free to use it directly.
 
